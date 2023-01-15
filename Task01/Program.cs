@@ -12,9 +12,9 @@ Console.WriteLine("Введите второе число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 if(square == number * number)
 {
-    Console.WriteLine("Первое чесло является квадратом второго");
+    Console.WriteLine($"{square} является квадратом {number}");
 }
 else
 {
-   Console.WriteLine("Первое чесло не является квадратом второго"); 
+   Console.WriteLine($"{square} не является квадратом {number}"); 
 }
