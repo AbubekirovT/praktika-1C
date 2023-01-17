@@ -25,6 +25,7 @@ int ThreeDigit(int num)
     {
         num = num / 10;
     }
+    num = num % 10;
     return num;
 }
 
@@ -32,4 +33,4 @@ Console.Write("Введите число : ");
 int number = Convert.ToInt32(Console.ReadLine());
 if (number < 0) number = number * (-1);
 if (number < 100) Console.WriteLine("третьей цифры нет");
-else Console.WriteLine(ThreeDigit(number) % 10);
+else Console.WriteLine(ThreeDigit(number));
