@@ -7,7 +7,6 @@
 
 int number = new Random().Next(100,1000);
 int firstDigit = number / 100;
-int secondDigit = number % 100;
-int thirdDigit = secondDigit % 10;
+int thirdDigit = number % 10;
 int num = (firstDigit*10) + thirdDigit;
 Console.WriteLine($"Из числа {number} получилось число {num}");
