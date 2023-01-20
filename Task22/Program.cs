@@ -6,11 +6,15 @@
 
 Console.WriteLine("Введите натуральное число:");
 int number = Convert.ToInt32(Console.ReadLine());
-if (number < 1) Console.WriteLine("Некорректный ввод");
-else Table(number);
+if (number < 1)
+{
+    Console.WriteLine("Некорректный ввод");
+    return;
+}
+Table123(number);
 
 
-void Table(int num)
+void Table123(int num)
 {
     int count = 1;
     while (count <= num)
