@@ -13,5 +13,14 @@ string Coordinates(string quar)
     if (quar == "4") return "x > 0, y < 0";
     return "Некорректный ввод";
 }
+//  switch (num)
+//     {
+//         case "1": return "Допустимые координаты: x > 0 и y > 0";
+//         case "2": return "Допустимые координаты: x < 0 и y > 0";
+//         case "3": return "Допустимые координаты: x < 0 и y < 0";
+//         case "4": return "Допустимые координаты: x > 0 и y < 0";
+//         default: return "Неккоректный ввод!";
+//     }
+
 string coordinates = Coordinates(quarter);
 Console.WriteLine(coordinates);
