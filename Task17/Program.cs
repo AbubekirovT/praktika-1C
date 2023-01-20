@@ -3,7 +3,7 @@
 // номер четверти плоскости, в которой находится эта
 // точка.
 
-Console.WriteLine("Введите xc: ");
+Console.WriteLine("Введите координаты: ");
 Console.Write("x: ");
 int x = Convert.ToInt32(Console.ReadLine());
 Console.Write("y: ");
