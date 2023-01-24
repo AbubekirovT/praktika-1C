@@ -7,22 +7,44 @@
 // нулями и единицами в случайном порядке.
 // [1,0,1,1,0,1,0,0]
 
-var array = new int[8];
-int[] FillArray(int[] arr)
+// var array = new int[8];
+// int[] FillArray(int[] arr)
+// {
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         arr[i] = new Random().Next(0, 2);
+//     }
+//     return arr;
+// }
+// void PrintArray(int[] arr)
+// {
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         Console.Write($"{arr[i]}, ");
+
+//     }
+// }
+// array = FillArray(array);
+// PrintArray(array);
+
+int[] GenerateArray(int size,int min, int max)
 {
-    for (int i = 0; i < array.Length; i++)
+    int[] arr = new int[size];
+    Random rnd = new Random(); 
+    for (int i = 0; i < arr.Length; i++)
     {
-        arr[i] = new Random().Next(0, 2);
+        arr[i] = rnd.Next(min, max + 1);
     }
     return arr;
 }
+
 void PrintArray(int[] arr)
 {
-    for (int i = 0; i < array.Length; i++)
+    for (int i = 0; i < arr.Length; i++)
     {
-        Console.Write($"{arr[i]}, ");
-
+        Console.Write($"{arr[i]} " );
     }
 }
-array = FillArray(array);
+
+int [] array = GenerateArray(8, 0, 1);
 PrintArray(array);
