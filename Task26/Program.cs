@@ -6,11 +6,12 @@
 
 Console.WriteLine("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine());
-if (number < 0) number = number * (-1);
+
 
 
 int NumberOfDigits(int num)
 {
+    if (num < 0) num = num * (-1);
     int count = 0;
     while (num > 0)
     {
