@@ -25,17 +25,22 @@ string PrintArrayDouble(double[] arr)
 
 double Difference(double[] arr)
 {
-    double min = default;
-    double max = default;
+    double min = arr[0];
+    double max = arr[0];
     for (int i = 0; i < arr.Length; i++)
     {
         if (arr[i]>max) max = arr[i];
-        else if (arr[i]<min) min = arr[i];
+    }
+    for (int j = 0; j < arr.Length; j++)
+    {
+            if (arr[j]<min) min = arr[j];
     }
     double difference = max - min;
     return difference;
 }
 
-double[] array = CreateArrayRndDouble(5,0,99);
+double[] array = CreateArrayRndDouble(5,-99,99);
 double diff = Difference(array);
 Console.WriteLine($"[{PrintArrayDouble(array)}] -> {Math.Round(diff,2)}");
+
+
