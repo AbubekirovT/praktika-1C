@@ -18,5 +18,4 @@ bool Triangle(int A, int B, int C)
     else return false;
 }
 
-if (Triangle(number1, number2, number3)) Console.WriteLine("да");
-else Console.WriteLine("нет");
+Console.WriteLine(Triangle(number1, number2, number3) ? "да" : "нет");
