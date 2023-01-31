@@ -22,3 +22,25 @@ int DecimalToBinary(int num)
 
 int result = DecimalToBinary(number);
 Console.WriteLine(result);
+
+// string DecToBin(int num)
+// {
+//     string result = string.Empty;
+//     while (num > 0)
+//     {        
+//         result = num % 2 + result;
+//         num = num /2;
+//     }
+
+//     return result;
+// }
+
+
+// Console.Write("Введите десятичное число: ");
+// int number1 = Convert.ToInt32(Console.ReadLine());
+
+// string decToBin = DecToBin(number1);
+
+// Console.Write(number1);
+// Console.Write(" -> ");
+// Console.Write(decToBin);
