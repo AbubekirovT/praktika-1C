@@ -14,8 +14,7 @@ int number3 = Convert.ToInt32(Console.ReadLine());
 
 bool Triangle(int A, int B, int C)
 {
-    if (A < B + C && B < A + C && C < A + B) return true;
-    else return false;
+    return A < B + C && B < A + C && C < A + B;
 }
 
 Console.WriteLine(Triangle(number1, number2, number3) ? "да" : "нет");
