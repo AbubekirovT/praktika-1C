@@ -33,6 +33,6 @@ int[] CopyArray(int[] arr)
     return copyArray;
 }
 
-int[] array = GenerateArray(6,1,9);
+int[] array = GenerateArray(6, 1, 9);
 int[] copy = CopyArray(array);
 Console.WriteLine($"{PrintArray(array)} -> {PrintArray(copy)}");

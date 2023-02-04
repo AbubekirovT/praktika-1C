@@ -22,16 +22,16 @@ string PrintArray(int[] arr)
     string array = ($"{arr[0]}");
     for (int i = 1; i < arr.Length; i++)
     {
-        array = array + ($", {arr[i]}");
+        array = array + ($" {arr[i]}");
     }
     return array;
 }
 
 Console.WriteLine("Введите число N: ");
 int number = Convert.ToInt32(Console.ReadLine());
-if (number > 0 )
+if (number > 0)
 {
-int[] fib = Fibonacci(number);
-Console.WriteLine($"Если N = {number} -> {PrintArray(fib)}");
+    int[] fib = Fibonacci(number);
+    Console.WriteLine($"Если N = {number} -> {PrintArray(fib)}");
 }
 else Console.WriteLine("Неккоректный ввод");
