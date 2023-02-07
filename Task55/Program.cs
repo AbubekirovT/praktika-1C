@@ -44,6 +44,21 @@ int[,] ReplacingRowsWithColumns(int[,] matrix)
     }
     return mtx;
 }
+
+// void ChangeRowsOnColumns(int[,] matrix)
+// {
+//     for (int i = 0; i < matrix.GetLength(0) - 1; i++)
+//     {
+//         for (int j = i + 1; j < matrix.GetLength(1); j++)
+//         {
+//             int temporary = matrix[i, j];
+//             matrix[i, j] = matrix[j, i];
+//             matrix[j, i] = temporary;
+//         }
+//     }
+// }
+
+
 bool IsSquareMatrix(int[,] matrix)
 {
     return (matrix.GetLength(0) == matrix.GetLength(1));
