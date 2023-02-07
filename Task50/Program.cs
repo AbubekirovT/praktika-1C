@@ -42,7 +42,7 @@ void PrintMatrix(int[,] matrix)
 
 bool PresenceOfAnElementInAnArray(int[,] matrix, int rows, int columns)
 {
-    if (rows > matrix.GetLength(0) || columns > matrix.GetLength(1)) return true;
+    if (rows > matrix.GetLength(0) || columns > matrix.GetLength(1) || rows < 0 || columns < 0) return true;
     return false;
 }
 
