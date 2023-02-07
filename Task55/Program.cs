@@ -35,25 +35,28 @@ void PrintMatrix(int[,] matrix)
 int[,] ReplacingRowsWithColumns(int[,] matrix)
 {
     int[,] mtx = new int[matrix.GetLength(0), matrix.GetLength(0)];
-    if (matrix.GetLength(0) != matrix.GetLength(1)) Console.WriteLine("Действие невозмжно");
-    else
+    for (int i = 0; i < matrix.GetLength(0); i++)
     {
-        for (int i = 0; i < matrix.GetLength(0); i++)
+        for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            for (int j = 0; j < matrix.GetLength(1); j++)
-            {
-                mtx[j, i] = matrix[i, j];
-            }
+            mtx[j, i] = matrix[i, j];
         }
     }
     return mtx;
 }
+bool IsSquareMatrix(int[,] matrix)
+{
+    return (matrix.GetLength(0) == matrix.GetLength(1));
+}
 
-int[,] matrix2 = GenerateMatrix(4, 4, 0, 9);
+
+int[,] matrix2 = GenerateMatrix(4, 3, 0, 9);
 PrintMatrix(matrix2);
-Console.WriteLine();
-int[,] replacingRowsWithColumns = ReplacingRowsWithColumns(matrix2);
-PrintMatrix(replacingRowsWithColumns);
-
-
+if (IsSquareMatrix(matrix2))
+{
+    Console.WriteLine();
+    int[,] replacingRowsWithColumns = ReplacingRowsWithColumns(matrix2);
+    PrintMatrix(replacingRowsWithColumns);
+}
+else Console.WriteLine("Действие невозможно");
 
