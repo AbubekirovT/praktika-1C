@@ -11,3 +11,63 @@
 // 5 2 6 7
 
 // Программа считает сумму элементов в каждой строке и выдаёт номер строки с наименьшей суммой элементов: 1 строка
+
+int[,] GenerateMatrix(int rows, int columns, int min, int max)
+{
+    int[,] matrix = new int[rows, columns];
+    Random rnd = new Random();
+
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            matrix[i, j] = rnd.Next(min, max + 1);
+        }
+    }
+    return matrix;
+}
+
+void PrintMatrix(int[,] matrix)
+{
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        Console.Write("|");
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            if (j < matrix.GetLength(1) - 1) Console.Write($"{matrix[i, j],5} | ");
+            else Console.Write($"{matrix[i, j],5} ");
+        }
+        Console.WriteLine("|");
+    }
+}
+
+int MinSumElements(int[,] matrix)
+{
+    int sum = default;
+    for (int k = 0; k < matrix.GetLength(1); k++)
+    {
+        sum += matrix[0, k];
+    }
+    int min = sum;
+    sum = default;
+    int result = default;
+    for (int i = 1; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            sum += matrix[i, j];
+        }
+        if (sum < min)
+        {
+            min = sum;
+            result = i;
+        }
+        sum = default;
+    }
+    return result;
+}
+
+int[,] mtx = GenerateMatrix(4, 2, -9, 9);
+PrintMatrix(mtx);
+int res = MinSumElements(mtx);
+Console.WriteLine($"Минимальная сумма элементов в строке {res + 1}");
